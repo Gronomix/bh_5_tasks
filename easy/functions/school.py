@@ -21,4 +21,66 @@ school_data = {
     '2b': 30
 }
 
+def inc_students(school_data: dict):
+    for value in school_data.values():
+        if value > 1 and value == int:
+            school_data = round(value + 1)
+
+        return school_data
+
+
+
+
+
+def derc_student(school_data: dict):
+    value = school_data.values()
+    for key, value in school_data.values():
+        school_data[key] = round(value - 1)
+
+        return school_data
+
+
+
+
+
+
+def add_class(school_data:dict):
+
+    some_class = {'3d': 0}
+    school_data.update(some_class)
+    print(school_data)
+    return school_data
+
+
+
+def remove_class(school_data:dict):
+    school_data.pop('2a')
+    return school_data
+
+
+
+def calc_students(school_data: dict):
+    total_income = 0.00
+    for value in school_data.values():
+       total_income += value
+
+       return total_income
+
+
+
+
+def calc_students1(school_data: dict):
+    total_income = 0.00
+    for value in school_data.values():
+       total_income = sum(school_data.values())
+       return total_income
+
+
+
+print(calc_students1(school_data))
+print(calc_students(school_data))
+print(remove_class(school_data))
+print(add_class(school_data))
+
+print(inc_students(school_data))
 
