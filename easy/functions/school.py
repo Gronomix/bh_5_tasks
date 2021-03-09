@@ -33,9 +33,9 @@ def inc_students(school_data: dict):
 
 
 def derc_student(school_data: dict):
-    value = school_data.values()
-    for key, value in school_data.values():
-        school_data[key] = round(value - 1)
+    for value in school_data.values():
+        if value > 1 and value == int:
+            school_data = round(value - 1)
 
         return school_data
 
@@ -65,6 +65,7 @@ def calc_students(school_data: dict):
        total_income += value
 
        return total_income
+    # не понимаю почему не считает правильно
 
 
 
