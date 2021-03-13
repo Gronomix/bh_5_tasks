@@ -3,3 +3,17 @@
 
 Можно пользоваться только функциями, операторами и условиями
 """
+
+
+def num_sum(n):
+    if n == 0:
+        return 0
+
+    return n % 10 + num_sum(n // 10)
+
+sumn = num_sum(565)
+print(sumn)
+
+
+
+
