@@ -13,6 +13,7 @@ def get_even_nember(x: int):
         if x != 0:
 
             result = x * 2
+            print(result)
 
             return result
 
