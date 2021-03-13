@@ -4,3 +4,8 @@
 
 для расчета суммы можно воспользоваться функцией sum
 """
+def calc_summ(*args: int):
+    result = sum(args)
+    return result
+
+print(calc_summ(1, 2, 3, 4))

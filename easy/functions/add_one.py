@@ -13,3 +13,11 @@ add_two(3)  # 5
 add_three = add_numb(3)
 add_three(3) # 6
 """
+def add_numb(n: int):
+    def wrapper(x):
+        return n + x
+
+    return wrapper
+
+add_two = add_numb(2)
+print(add_two(123))
