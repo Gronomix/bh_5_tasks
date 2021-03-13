@@ -11,6 +11,11 @@ LIST_2 = [i for i in range(20)]
 def get_dict_from_lists(LIST_1: list, LIST_2: list):
     some_dict = dict(zip(LIST_1, LIST_2))
     print(some_dict)
-    return print(some_dict)
+    return some_dict
+
+
+
+some_dict1 = get_dict_from_lists(LIST_1, LIST_2)
+print(some_dict1)
 
 
