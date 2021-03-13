@@ -10,16 +10,18 @@ next(even_gen) -> 4
 next(even_gen) -> 6
 """
 def get_ever_number(n: int):
-    even = []
 
     for x in range(n):
-        if x % 2 == 0:
-            even.append(x)
-    return even
+        if x != 0:
+            if x % 2 == 0:
+                yield x
 
 
+even_gen = get_ever_number(20)
 
-if __name__ == '__main__':
-    n = int(input('Ведите количество генерируемых значений '))
-    even_gen = get_ever_number
-    print(next(even_gen))
+print(next(even_gen))
+print(next(even_gen))
+print(next(even_gen))
+print(next(even_gen))
+print(next(even_gen))
+
