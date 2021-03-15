@@ -8,7 +8,9 @@
 
 def repeat_n_times(bang):
     def wrapper(n):
-        print(f"{bang * n}")
+        print('Результат')
+        result = print( f'{bang * n}')
+        return result
 
     return wrapper
 
