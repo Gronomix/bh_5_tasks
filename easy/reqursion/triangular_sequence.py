@@ -24,3 +24,11 @@ n = 6:
 55555
 666666
 """
+
+
+def treangular_sequence(n, current=1):
+    if current <= n:
+        print(str(current) * current)
+        treangular_sequence(n, current + 1)
+
+treangular_sequence(6)
