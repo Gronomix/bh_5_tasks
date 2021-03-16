@@ -6,21 +6,23 @@
 """
 
 
-def repeat_n_times(bang):
-    def wrapper(n):
-        print('Результат')
-        result = print( f'{bang * n}')
-        return result
-
-    return wrapper
-
-
-def bang(n):
-    print('BOOM \n')
-    return
-
-bang_func = bang(6)
+def repeat_n_times(n):
+    def decorator(func):
+            def wrapper(*args, **kwargs):
+                for i in range(n):
+                    func(*args, **kwargs)
+            return wrapper
+    return decorator
 
 
 
-print(bang_func)
+
+@repeat_n_times(6)
+def bang():
+    print('BOOM')
+
+bang()
+
+
+
+
